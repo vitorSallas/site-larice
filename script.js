@@ -30,7 +30,15 @@ function atualizar() {
 setInterval(atualizar, 1000);
 
 // MENSAGEM
-const texto = "Eu sei que esse momento não é fácil… mas quero que você sinta que não está sozinha. Eu tô aqui com você, pra tudo. Você é muito importante pra mim, Larice. 💗";
+const texto = "Eu sei que nem todos os momentos são fáceis…
+mas quero que você nunca esqueça que não está sozinha.
+Eu tô aqui, de verdade. Pra tudo.
+
+Seja nos dias bons, pra comemorar…
+ou nos dias difíceis, só pra segurar sua mão e te lembrar que vai ficar tudo bem.
+
+Você é especial, Larice. Muito mais do que imagina.
+E eu sou muito feliz por ter você na minha vida.";
 
 let i = 0;
 
