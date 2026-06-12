@@ -3,53 +3,317 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Larice 💗</title>
-<link rel="stylesheet" href="style.css">
+<title>Uma Surpresa Para Você ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e1b4b,#4c1d95);
+color:white;
+overflow-x:hidden;
+}
+
+.screen{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+text-align:center;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+p{
+max-width:700px;
+line-height:1.8;
+font-size:1.1rem;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff4fa3,#9d4edd);
+color:white;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+box-shadow:0 0 20px rgba(255,79,163,.5);
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.hidden{
+display:none;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:25px;
+margin-top:20px;
+max-width:900px;
+width:100%;
+}
+
+img{
+width:100%;
+max-width:420px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,255,255,.2);
+margin-bottom:20px;
+}
+
+.timer{
+font-size:2rem;
+font-weight:bold;
+margin-top:15px;
+color:#ffd166;
+}
+
+.music{
+margin-top:25px;
+}
+
+.music a{
+text-decoration:none;
+color:white;
+background:#1DB954;
+padding:12px 25px;
+border-radius:30px;
+display:inline-block;
+font-weight:bold;
+}
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+color:#ff5ea8;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+.final{
+font-size:2rem;
+font-weight:bold;
+color:#ffb3d9;
+margin-top:30px;
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- TELA 1 -->
-<section id="tela1">
-    <h1 class="titulo">Larice 💗</h1>
-    <p>Uma surpresinha pra você…</p>
-    <button class="btn-main" onclick="entrar()">Clique aqui</button>
-</section>
+<div class="hearts"></div>
 
-<!-- TELA 2 -->
-<section id="tela2">
+<section class="screen" id="inicio">
 
-<div class="top-bar">
-    <span class="badge">● versão premium</span>
-    <span id="dataAtual"></span>
-</div>
+<h1>Larice ❤️</h1>
 
-<div class="container">
+<p>
+Tenho uma pequena surpresa para você...
+</p>
 
-    <h1 class="fade">Fiz isso com carinho pra você 💗</h1>
+<p style="margin-top:20px">
+Em meio a tantos dias corridos,
+tantas preocupações e tantos pensamentos,
+eu queria criar um cantinho só nosso.
+</p>
 
-    <!-- FOTO + CONTADOR -->
-    <div class="card destaque">
-        <img src="foto.jpg">
-        <h3 id="contador"></h3>
-
-        <button class="btn musica" onclick="abrirMusica()">
-            🎶 Ouvir nossa música
-        </button>
-    </div>
-
-    <!-- MENSAGEM -->
-    <div class="card">
-        <h2>Uma mensagem pra você 💌</h2>
-        <button class="btn" onclick="mostrarMensagem()">Abrir</button>
-        <div id="mensagem"></div>
-    </div>
-
-</div>
+<button class="btn" onclick="abrirSurpresa()">
+✨ Clique Aqui
+</button>
 
 </section>
 
-<script src="script.js"></script>
+<section class="screen hidden" id="surpresa">
+
+<div class="card">
+
+<img src="foto.jpg" alt="Nós dois">
+
+<h1>Você é muito especial para mim ❤️</h1>
+
+<p>
+Meu amor,
+<br><br>
+Nos últimos dias eu sei que seu coração tem carregado muitas preocupações.
+<br><br>
+Sei que nem sempre é fácil sorrir quando a cabeça está cheia e o coração está apertado.
+<br><br>
+Mas quero que você saiba de uma coisa:
+<br><br>
+Você não precisa passar por nada sozinha.
+<br><br>
+Eu admiro sua força.
+Admiro seu coração.
+Admiro a mulher incrível que você é.
+<br><br>
+E mesmo nos dias difíceis...
+meu lugar continua sendo ao seu lado.
+❤️
+</p>
+
+<div class="timer" id="contador"></div>
+
+<div class="music">
+<a href="https://open.spotify.com/track/7ncpeYDcVRsp7UA1US3mNu?si=FBucij3TT2mphHi4wzkLMw" target="_blank">
+🎵 Ouvir Nossa Música
+</a>
+</div>
+
+</div>
+
+<div class="card">
+
+<h1>🌹 Meu Convite</h1>
+
+<p>
+
+Hoje é Dia dos Namorados.
+
+<br><br>
+
+E eu queria te convidar para algo simples.
+
+Mas especial.
+
+<br><br>
+
+Quero te levar para um lugar especial.
+
+<br><br>
+
+O restaurante OnlyDeck.
+
+<br><br>
+
+Um lugar para conversarmos sem pressa.
+
+Para sorrirmos.
+
+Para criarmos mais uma lembrança bonita juntos.
+
+<br><br>
+
+Então...
+
+</p>
+
+<div class="final">
+
+❤️ Aceita jantar comigo hoje? ❤️
+
+</div>
+
+<button class="btn" onclick="aceitou()">
+SIM ❤️
+</button>
+
+</div>
+
+</section>
+
+<script>
+
+function abrirSurpresa(){
+document.getElementById("inicio").classList.add("hidden");
+document.getElementById("surpresa").classList.remove("hidden");
+}
+
+function aceitou(){
+alert("❤️ Eu sabia que você iria aceitar! ❤️");
+}
+
+const inicio = new Date("2025-12-21T00:00:00");
+
+function atualizarContador(){
+
+const agora = new Date();
+
+const diff = agora - inicio;
+
+const dias = Math.floor(diff / (1000*60*60*24));
+
+const horas = Math.floor((diff/(1000*60*60))%24);
+
+const minutos = Math.floor((diff/(1000*60))%60);
+
+const segundos = Math.floor((diff/1000)%60);
+
+document.getElementById("contador").innerHTML =
+`❤️ ${dias} dias ${horas}h ${minutos}m ${segundos}s juntos ❤️`;
+
+}
+
+setInterval(atualizarContador,1000);
+
+function criarCoracao(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*25+15)+"px";
+
+heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+document.querySelector(".hearts").appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+setInterval(criarCoracao,500);
+
+</script>
 
 </body>
 </html>
